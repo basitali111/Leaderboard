@@ -4,8 +4,11 @@
   padding: 0;
 }
 
+html {
+  background: url(/src/images/high-score-hed.jpg) center center/cover;
+}
+
 body {
-  background: #fff url(/src/images/high-score-hed.jpg) center center/cover no-repeat;
   animation: myAnim 4s ease 1s 1 normal forwards;
 
   @keyframes myAnim {
