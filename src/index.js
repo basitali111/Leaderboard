@@ -10,7 +10,9 @@ class UI {
   static addTOList(scoreList) {
     const list = document.querySelector('.table');
     const row = document.createElement('tr');
-    row.innerHTML = `<td>${scoreList.user}:${scoreList.score}</td>`;
+    row.classList.add('cell');
+    row.innerHTML = `<td >${scoreList.user}</td>
+    <td>${scoreList.score}</td>`;
     list.appendChild(row);
   }
 
