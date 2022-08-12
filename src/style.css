@@ -4,6 +4,44 @@
   padding: 0;
 }
 
+html {
+  background: url(/src/images/high-score-hed.jpg) center center/cover;
+}
+
+body {
+  animation: myAnim 4s ease 1s 1 normal forwards;
+
+  @keyframes myAnim {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -17,11 +55,19 @@ h1 {
   margin-top: 20px;
   font-size: 59px;
   font-family: sans-serif;
+  color: #5aff00;
+  text-shadow: 5px 5px 10px #d613c3;
+}
+
+h1:hover {
+  width: 295px;
+  transition: width 2s linear 0s;
 }
 
 #recent-score {
   margin-left: 50px;
   font-size: 31px;
+  font-family: sans-serif;
 }
 
 .refresh-btn {
@@ -31,10 +77,17 @@ h1 {
   align-items: flex-start;
 }
 
+h2 {
+  color: #5aff00;
+  text-shadow: 5px 5px 10px #d613c3;
+  font-family: sans-serif;
+}
+
 .table {
-  border: 1px solid black;
   width: 100%;
   margin-top: 22px;
+  overflow-y: scroll;
+  color: #ff0078;
 }
 
 #form {
@@ -47,15 +100,20 @@ h1 {
 #name {
   padding: 5px;
   margin: 18px;
+  border-radius: 7px;
+  border: 2px solid #d613c3;
 }
 
 #score {
   padding: 5px;
   margin: auto 18px;
+  border-radius: 7px;
+  border: 2px solid #d613c3;
 }
 
 .input {
   font-size: 31px;
+  border-radius: 3px;
 }
 
 #submit {
@@ -63,11 +121,41 @@ h1 {
   margin-top: 14px;
   margin-right: 18px;
   padding: 5px;
+  box-shadow: 5px 5px 10px 1px #d613c3;
+  border-radius: 4px;
+  border: 2px solid #d613c3;
+  font-weight: bold;
+}
+
+#submit:hover {
+  box-shadow: 5px 5px 10px 1px #d613c3;
+  background-color: #d613c3;
 }
 
 #refresh {
-  background: none;
-  border: 1px solid black;
-  padding-left: 4px;
+  border: 2px solid #d613c3;
+  padding: 3px;
   margin-top: 23px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px 1px #d613c3;
+}
+
+#refresh:hover {
+  box-shadow: 5px 5px 10px 1px #d613c3;
+  background-color: #d613c3;
+}
+
+.cell {
+  border: 2px solid #d613c3;
+}
+
+table,
+th,
+td {
+  border: 1px solid #d613c3;
+  border-collapse: collapse;
+  padding-left: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
